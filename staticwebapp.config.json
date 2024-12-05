@@ -1,0 +1,10 @@
+{
+    "routes": [
+      {
+        "route": "/*",
+        "redirect": "https://www.yalemsew.com",
+        "statusCode": 301
+      }
+    ]
+  }
+  
