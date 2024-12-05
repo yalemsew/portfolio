@@ -14,6 +14,7 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -173,26 +174,27 @@
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-				<form method="post" action="#">
+				<form id="contact-form" method="post" action="#">
 					<div class="fields">
 						<div class="field half">
 							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<input type="text" name="from_name" id="name" required />
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
+							<input type="email" name="from_email" id="email" required />
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="4"></textarea>
+							<textarea name="message" id="message" rows="4" required></textarea>
 						</div>
 					</div>
 					<ul class="actions">
 						<li><input type="submit" value="Send Message" class="primary" /></li>
-						<li><input type="reset" value="Reset" /></li>
 					</ul>
 				</form>
+				<div id="success-message" style="display:none; color: green; margin-top: 20px;"></div>
+
 				<ul class="icons">
 					<li><a href="https://www.linkedin.com/in/yalemsew/" class="icon brands fa-linkedin-in"><span
 								class="label">Linkedin</span></a></li>
@@ -402,9 +404,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</ul>
 				</section>
 
-				<section>
-					<h3 class="major">Form</h3>
-					<form method="post" action="#">
+				<!-- <section>
+					<h3 class="major">Form</h3> -->
+				<!-- <form method="post" action="#">
 						<div class="fields">
 							<div class="field half">
 								<label for="demo-name">Name</label>
@@ -415,7 +417,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								<input type="email" name="demo-email" id="demo-email" value=""
 									placeholder="jane@untitled.tld" />
 							</div>
-							<!-- <div class="field">
+							<div class="field">
 								<label for="demo-category">Category</label>
 								<select name="demo-category" id="demo-category">
 									<option value="">-</option>
@@ -440,7 +442,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<div class="field half">
 								<input type="checkbox" id="demo-human" name="demo-human" checked>
 								<label for="demo-human">Not a robot</label>
-							</div> -->
+							</div>
 							<div class="field">
 								<label for="demo-message">Message</label>
 								<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
@@ -451,8 +453,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<li><input type="submit" value="Send Message" class="primary" /></li>
 							<li><input type="reset" value="Reset" /></li>
 						</ul>
-					</form>
-				</section>
+					</form> -->
+
+
+				<!-- </section> -->
+
 
 			</article>
 
@@ -478,3 +483,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 </body>
 
 </html>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+	(function () {
+		emailjs.init("RzwwCVBObnBl21vyh"); // Replace with your Public Key
+	})();
+
+	document.getElementById("contact-form").addEventListener("submit", function (event) {
+		event.preventDefault(); // Prevent the default form submission
+
+		// Call EmailJS to send the email using the provided service and template IDs
+		emailjs.sendForm("service_nandjva", "template_bzv5apj", this).then(
+			function () {
+				// Success callback - show the success message on the page
+				const successMessage = document.getElementById("success-message");
+				successMessage.textContent = "Message sent successfully!";
+				successMessage.style.display = "block"; // Make the success message visible
+
+				// Reload the page after 3 seconds (or any desired time)
+				setTimeout(function () {
+					location.reload(); // Reload the page
+				}, 1000); // Adjust delay as necessary
+			},
+			function (error) {
+				// Error callback
+				console.error("Error sending message:", error);
+				alert("Failed to send message.");
+			}
+		);
+	});
+</script>
