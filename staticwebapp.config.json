@@ -1,7 +1,7 @@
 {
     "routes": [
       {
-        "route": "/*",
+        "route": "yalemsew.com",
         "redirect": "https://www.yalemsew.com",
         "statusCode": 301
       }
