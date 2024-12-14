@@ -104,56 +104,100 @@
 			<!-- Work -->
 			<article id="work">
 				<h2 class="major">Work Experience</h2>
-				<span class="image main"><img src="images/pic06.jpg" alt="" /></span>
-				<div>
-					<h3>Software Engineer | Backend</h3>
-					<p><strong>Jimma University</strong> - Jimma, Oromia Region, Ethiopia</p>
-					<p><em>September 2021 - June 2023</em></p>
+
+				<div class="work-entry">
+					<h3>Software Engineer</h3>
+					<p><strong>Jimma University</strong> &bull; Jimma, Oromia Region, Ethiopia</p>
+					<p><em>September 2020 - June 2023</em></p>
 					<ul>
-						<li>Developed a class and exam scheduling application using Java Spring Boot and Time4J,
-							optimizing scheduling and resolving conflicts for efficient resource allocation.</li>
-						<li>Implemented a student announcement service with automated notifications using Amazon SES,
-							improving communication and reducing manual intervention through AWS integration.</li>
-						<li>Designed and implemented a <strong>course recommendation system</strong> using Spring Boot
-							and Redis, reducing data retrieval time by 20%.</li>
-						<li>Developed secure, role-based RESTful APIs for student profile and course management,
-							ensuring data integrity and accessibility.</li>
-						<li>Migrated and integrated internal APIs from legacy on-premise servers to AWS infrastructure
-							(EC2 and S3).</li>
-						<li>Utilized AWS services like ECS and AWS Fargate for deploying containerized applications,
-							improving scalability and reliability.</li>
-						<li>Integrated role-based access control (RBAC) with Spring Security to manage permissions for
-							students, admins, and instructors.</li>
-						<li>Established CI/CD pipelines using Jenkins to streamline deployment and increase efficiency.
+						<li><strong>Class and Exam Scheduling Application:</strong> Developed using Java Spring Boot and
+							Time4J to optimize scheduling and resolve conflicts, ensuring efficient resource allocation.
 						</li>
+						<li><strong>Automated Notifications:</strong> Built a student announcement service using Amazon
+							SES to streamline communication and reduce manual intervention through AWS integration.</li>
+						<li><strong>Data Backup and Replication:</strong> Secured critical student data with AWS Storage
+							Gateway, enhancing durability and accessibility.</li>
+						<li><strong>API Modernization:</strong> Migrated and integrated internal APIs from a legacy
+							on-premise server to AWS infrastructure (EC2 and S3).</li>
+						<li><strong>Containerized Deployments:</strong> Utilized AWS ECS and Fargate for seamless
+							scaling and reliability of applications.</li>
+						<li><strong>Role-Based Access Control (RBAC):</strong> Integrated with Spring Security to
+							efficiently manage user permissions for students, admins, and instructors.</li>
+						<li><strong>CI/CD Pipelines:</strong> Established robust pipelines for automated deployment,
+							significantly increasing efficiency.</li>
+						<li><strong>High-Performance APIs:</strong> Designed RESTful APIs with Redis caching, rate
+							limiting, and authentication to boost performance and ensure secure access.</li>
+						<li><strong>Course Recommendation System:</strong> Built with Spring Boot and Redis, reducing
+							data retrieval time by 20%.</li>
+						<li><strong>Team Leadership:</strong> Guided and unblocked team members to achieve project
+							goals.</li>
 					</ul>
 				</div>
 
-				<div>
-					<h3>Junior Software Engineer | UI</h3>
-					<p><strong>Jimma University</strong> - Jimma, Oromia Region, Ethiopia</p>
-					<p><em>June 2020 - September 2021</em></p>
+				<div class="work-entry">
+					<h3>Junior Software Engineer</h3>
+					<p><strong>Geez Software Technology</strong></p>
+					<p><em>June 2018 - September 2020</em></p>
 					<ul>
-						<li>Developed a responsive student dashboard as a Single Page Application (SPA) using Angular
-							and RxJS.</li>
-						<li>Implemented lazy loading and code splitting to enhance performance and load times.</li>
-						<li>Designed intuitive user interfaces with Angular Material components, improving usability and
-							aesthetics.</li>
-						<li>Built a backend-for-frontend (BFF) using Node.js to aggregate and transform data from
-							various microservices.</li>
-						<li>Conducted unit and integration testing using JUnit, Mockito, and Angular Testing Library,
-							achieving 85% test coverage.</li>
+						<li><strong>Backend for Frontend (BFF):</strong> Implemented using Node.js for efficient data
+							aggregation and transformation, enhancing user experience.</li>
+						<li><strong>Medication Reminder System:</strong> Developed a scalable system using AWS SNS and
+							SQS, improving patient adherence and reducing medication errors.</li>
+						<li><strong>Patient Dashboard:</strong> Created a responsive, user-friendly, and mobile-first
+							dashboard using Angular, RxJS, and Angular Material UI, significantly improving user
+							satisfaction.</li>
+						<li><strong>Secure Navigation:</strong> Implemented Angular Router with route guards to protect
+							sensitive routes.</li>
+						<li><strong>Intuitive Interfaces:</strong> Designed sleek UI components using Angular Material,
+							including dropdowns, modals, and tabs.</li>
+						<li><strong>Performance Optimization:</strong> Leveraged lazy loading and code splitting to
+							improve load times and responsiveness.</li>
+						<li><strong>Medical Data Presentation:</strong> Engineered a Vue.js-based system for clear and
+							compelling medical data presentations.</li>
 					</ul>
 				</div>
+				<h2 class="major">Projects</h2>
 
+				<div class="project-entry">
+					<h3>Maharishi International University (2024)</h3>
+					<p><strong>Smart Course Attendance System</strong></p>
+					<p>A RESTful microservices system to automate course attendance for Compro students using Spring
+						Boot, Spring MVC, Spring Security, Spring Data JPA, and Spring Cloud Services. The system
+						records student attendance via badge scans, stores course and session data, and generates
+						detailed attendance reports. It includes robust data monitoring and logging for optimal
+						performance and reliability, along with features like automated email reminders and role-based
+						access control.</p>
+				</div>
+
+				<div class="project-entry">
+					<h3>Stock Monitoring Mobile App | Personal Project (~4 months)</h3>
+					<p><strong>Jan 2021 - Jul 2021</strong></p>
+					<p>The <strong>Stock Monitoring Mobile App</strong> is a robust, user-centric mobile application
+						designed to provide real-time financial updates and notifications. It empowers users to stay
+						informed about stock price movements and manage their investments effectively.</p>
+					<ul>
+						<li><strong>Real-time Price Alerts:</strong> Leveraged WebSockets to establish a persistent
+							connection between the client and server for real-time updates, enabling instant
+							notifications for significant price changes.</li>
+						<li><strong>Accurate Financial Data:</strong> Integrated financial data APIs to fetch up-to-date
+							and precise stock information, ensuring reliability and accuracy.</li>
+						<li><strong>Personalized Watchlists:</strong> Allowed users to create and customize watchlists
+							to track their preferred stocks with an intuitive and user-friendly UI.</li>
+						<li><strong>Mobile-first Design:</strong> Used Flutter for a seamless cross-platform experience
+							on both Android and iOS, delivering a responsive and visually appealing interface.</li>
+						<li><strong>Backend Architecture:</strong> Built a backend with Node.js to efficiently process
+							data requests and manage real-time updates with low latency.</li>
+					</ul>
+				</div>
 			</article>
+
 
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">About</h2>
 				<span class="image main"><img src="images/pic08.jpg" alt="" /></span>
 				<p>
-					I am a passionate and results-driven <strong>Full Stack Software Engineer</strong> with 3+ years of
+					I am a passionate and results-driven <strong>Full Stack Software Engineer</strong> with 5+ years of
 					professional experience in designing and developing
 					scalable enterprise applications. Proficient in <strong>Java</strong>, <strong>JavaScript</strong>,
 					and frameworks like <strong>Spring Boot</strong>, <strong>Angular</strong>, and
@@ -173,6 +217,7 @@
 					to craft innovative solutions
 					that make a meaningful impact. Let’s connect and build something amazing together!
 				</p>
+
 			</article>
 
 			<!-- Contact -->
